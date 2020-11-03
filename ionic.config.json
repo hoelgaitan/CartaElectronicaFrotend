@@ -1,0 +1,7 @@
+{
+  "name": "ionicCartaElectronicaFrontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
