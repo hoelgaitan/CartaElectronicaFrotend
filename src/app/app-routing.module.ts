@@ -1,16 +1,31 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { BebidasComponent } from './pages/bebidas/bebidas.component';
+import { EnsaladasComponent } from './pages/ensaladas/ensaladas.component';
+import { PastasComponent } from './pages/pastas/pastas.component';
+import { ProductoComponent } from './pages/producto/producto.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'pastas',
+    component: PastasComponent
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'ensaladas',
+    component: EnsaladasComponent
   },
+  {
+    path: 'bebidas',
+    component: BebidasComponent
+  },
+  {
+    path: 'productos',
+    component: ProductoComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'productos'
+  }
 ];
 
 @NgModule({
